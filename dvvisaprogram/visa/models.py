@@ -27,12 +27,17 @@ class Form(models.Model):
         ('uk', 'uk'),
         ('germany','germany')
     ]
-    
+    PASSPORT=[
+        ('yes','yes'),
+        ('no','no')
+    ]
     
     
     name= models.CharField(max_length=100, null=False)
     email = models.CharField(max_length=100, null=False)
     telephone = models.CharField(max_length=100)
+    city = models.CharField(max_length=100, null=True)
+    province = models.CharField(max_length= 100, null=True)
     dob = models.DateField()
     sex = models.CharField(max_length=20, choices=SEX)
     marital_status = models.CharField(max_length=20, choices=MARITAL_STATUS)
@@ -41,6 +46,7 @@ class Form(models.Model):
     digital_address = models.CharField(max_length=100, null=False)
     country_from = models.CharField(max_length=100, null=False)
     country_to = models.CharField(max_length=20, choices=COUNTRY)
+    passport = models.CharField(max_length=100, choices=PASSPORT, null=True)
     
     # def __str__(self):
     #     return self
