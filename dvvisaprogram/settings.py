@@ -54,7 +54,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Replace with your React development server's address
+    "https://dvvisaprogram.web.app",  # Replace with your React development server's address
 ]
 
 
